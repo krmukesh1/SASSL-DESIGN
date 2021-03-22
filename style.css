@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+html,
+body {
+  font-family: "Rubik", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Rubik", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  align-items: center;
+}
+
+.top-header .left a {
+  padding-right: 20px;
+  color: #000;
+}
+.top-header .right {
+  margin-left: 70px;
+  cursor: pointer;
+}
+.top-header .right img {
+  padding-left: 10px;
+}
+.middle-header {
+  padding: 13px;
+  border: 1px solid #000;
+  background-color: #000;
+}
+navigation ul {
+  display: flex;
+  justify-content: center;
+}
+
+navigation ul li a {
+  color: #fff;
+  padding: 25px;
+  font-size: 1.2rem;
+}
+.bottom-header {
+  padding: 13px;
+  border: 1px solid #caebf2;
+  background-color: #caebf2;
+  text-transform: uppercase;
+}
+offer ul {
+  display: flex;
+  justify-content: center;
+}
+
+offer ul li a {
+  padding-right: 25px;
+  color: #000;
+}
+offer ul li a span {
+  font-weight: 600;
+}
+/* banner1 */
+.banner1 {
+  background: #f2afb8;
+}
+.banner-img {
+  height: 670px;
+}
+.banner1 img {
+  margin-top: 40px;
+}
+.banner-content {
+  position: absolute;
+  top: 35%;
+  left: 49rem;
+  right: 19rem;
+}
+.banner-content h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #8d3b47;
+}
+.banner-content h2 {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #fff;
+}
+.banner-content h2::before {
+  content: "FINEST";
+  position: absolute;
+  font-size: 16.5rem;
+  opacity: 0.06;
+  top: 35px;
+  color: #000;
+  font-weight: 200;
+  right: 2rem;
+  letter-spacing: 5px;
+}
+.banner-content h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+
+.banner-content button {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  border-color: #fff;
+  cursor: pointer;
+  background: #fff;
+  border: NONE;
+}
+.banner-content button::after {
+  content: "";
+  padding: 24px 96px;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 8px;
+}
+button:active {
+  border-style: none !important;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+/* spaciality */
+.special {
+  background: #f0f0f0;
+  padding: 40px 0;
+}
+.spaciality {
+  display: flex;
+  justify-content: space-between;
+}
+.Shiping,
+.offers,
+.offercode,
+.delivery {
+  display: flex;
+}
+.Shiping,
+.offers,
+.offercode,
+.delivery,
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.Shiping,
+.offers,
+.offercode,
+.delivery,
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+img.truck,
+img.tag,
+img.rupees {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+/* Sale */
+.sale {
+  padding-top: 134px;
+}
+.sale .flash-sale {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+.sale .flash-sale li {
+  margin-bottom: -7px;
+}
+.sale .flash-sale li a {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 500;
+}
+.sale .flash-sale li a span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.sale .flash-sale ul.right li a {
+  color: #c6281d;
+  font-size: 1.2rem;
+}
+.sale .flash-sale ul.right {
+  padding: 43px 0 0 0;
+}
+hr {
+  margin-bottom: 60px;
+}
+/* product */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.img-top {
+  position: relative;
+}
+.product .content-img {
+  top: 15px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  height: 44px;
+  width: 44px;
+  padding: 12px 0 0 2px;
+  background: #fff;
+  cursor: pointer;
+}
+.img-top:hover .hovercart {
+  display: block;
+}
+.product .hovercart {
+  background: #d62214;
+  opacity: 0.9;
+  width: 100%;
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+  padding: 19px;
+  display: none;
+  cursor: pointer;
+}
+.hovercart img {
+  margin: 0px 8px;
+  height: 23px;
+}
+.product p span {
+  text-decoration-line: line-through;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.sale .product .content {
+  margin-top: 20px;
+}
+.sale .product .content h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.sale .product .content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-weight: 700;
+}
+/* limited offers */
+.sale .flash-offers {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+.sale .flash-offers li {
+  margin-bottom: -7px;
+}
+.sale .flash-offers li a {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 500;
+}
+.sale .flash-offers li a span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.sale .flash-offers ul.right li a {
+  color: #c6281d;
+  font-size: 1.2rem;
+}
+.sale .flash-offers ul.right {
+  padding: 15px 0 0 0;
+}
+/* pramotion */
+.pramotion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.flash-adv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+.flash-adv ul.left {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flash-adv ul.right {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flash-adv li {
+  margin-bottom: -7px;
+  padding: 0px 20px;
+}
+.flash-adv li a {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 500;
+}
+.flash-adv .right li {
+  margin-bottom: -7px;
+  padding: 4px 15px 4px 8px;
+}
+.flash-adv li a span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.flash-adv ul.right li a {
+  color: #c6281d;
+  font-size: 1.2rem;
+}
+.flash-adv ul.right {
+  padding: 15px 0 0 0;
+}
+/* Instagram */
+.adv-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+.adv-img .card {
+  position: relative;
+}
+.adv-img .card .img-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+/* subscribe */
+.subscribe {
+  background: #000;
+  padding: 45px 0;
+  margin-bottom: 8rem;
+  color: #fff;
+}
+.sub-letter {
+  display: flex;
+  justify-content: space-between;
+}
+.sub-letter .content-left {
+  display: flex;
+}
+.sub-letter .content-left h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.sub-letter .content-left span {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #f94438;
+}
+.sub-letter .content-left {
+  display: flex;
+  padding-left: 100px;
+}
+.sub-letter .content-left img {
+  height: 36px;
+  width: 40px;
+  margin-left: 21px;
+  margin-top: 8px;
+}
+.sub-letter .content-right span {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.sub-letter .content-right input {
+  padding: 17px 53px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  font-size: 20px;
+}
+input:focus {
+  outline: 0 !important;
+  outline-offset: none !important;
+  box-shadow: none !important;
+}
+input:active {
+  border-style: none !important;
+}
+.sub-letter .content-right a {
+  background: red;
+  padding: 20px 33px 19px 33px;
+  border-radius: 0px 30px 30px 0;
+  margin-left: -4px;
+}
+.sub-letter .content-right a img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+}
