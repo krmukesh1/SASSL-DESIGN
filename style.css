@@ -3,20 +3,13 @@ html,
 body {
   font-family: "Rubik", sans-serif;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
+p,h1,h2,h3,h4,h5,h6,span{
   font-family: "Rubik", sans-serif;
 }
-li {
+li{
   list-style: none;
 }
-a {
+a{
   text-decoration: none;
 }
 * {
@@ -28,11 +21,15 @@ a {
   max-width: 1300px;
   margin: 0 auto;
 }
+header{
+  background: gainsboro;
+}
 .top-header {
   display: flex;
   justify-content: space-between;
   padding: 20px 0px;
   align-items: center;
+  
 }
 
 .top-header .left a {
@@ -51,12 +48,16 @@ a {
   border: 1px solid #000;
   background-color: #000;
 }
-navigation ul {
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav ul {
   display: flex;
   justify-content: center;
 }
 
-navigation ul li a {
+nav ul li a {
   color: #fff;
   padding: 25px;
   font-size: 1.2rem;
@@ -67,33 +68,43 @@ navigation ul li a {
   background-color: #caebf2;
   text-transform: uppercase;
 }
-offer ul {
+nav a.icon {
+  display: none;
+}
+.offer ul {
   display: flex;
   justify-content: center;
 }
 
-offer ul li a {
+.offer ul li a {
   padding-right: 25px;
   color: #000;
 }
-offer ul li a span {
+.offer ul li a span {
   font-weight: 600;
 }
-/* banner1 */
-.banner1 {
+/* banner */
+.banner {
   background: #f2afb8;
+  position: relative;
+}
+.sticky + .banner {
+  margin-top: 205px !important;
+}
+.banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .banner-img {
   height: 670px;
 }
-.banner1 img {
+.banner img {
   margin-top: 40px;
+  position: relative;
 }
 .banner-content {
-  position: absolute;
-  top: 35%;
-  left: 49rem;
-  right: 19rem;
+  margin: 0 0px 0px 50px;
 }
 .banner-content h1 {
   font-size: 5rem;
@@ -104,19 +115,20 @@ offer ul li a span {
   font-size: 6rem;
   font-weight: 500;
   color: #fff;
+  position: relative;
 }
 .banner-content h2::before {
   content: "FINEST";
   position: absolute;
   font-size: 16.5rem;
   opacity: 0.06;
-  top: 35px;
+  top: -61px;
+  left: -87px;
   color: #000;
   font-weight: 200;
-  right: 2rem;
   letter-spacing: 5px;
 }
-.banner-content h3 {
+.banner-content p {
   font-size: 2rem;
   color: #fff;
   font-weight: 400;
@@ -131,6 +143,7 @@ offer ul li a span {
   border-color: #fff;
   cursor: pointer;
   background: #fff;
+  position: relative;
   border: NONE;
 }
 .banner-content button::after {
@@ -138,8 +151,9 @@ offer ul li a span {
   padding: 24px 96px;
   border: 1px solid #fff;
   position: absolute;
-  left: 8px;
+  left: 4px;
 }
+
 button:active {
   border-style: none !important;
 }
@@ -156,6 +170,7 @@ button:focus {
 .spaciality {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .Shiping,
 .offers,
@@ -192,31 +207,35 @@ img.rupees {
 .sale {
   padding-top: 134px;
 }
+.sale .left h2 {
+  font-size: 2rem;
+}
+.sale .right a {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.sale .time{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.sale .time1{
+  font-size: 1.3rem;
+  color: red;
+  font-weight: 400;
+
+}
+.sale h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
 .sale .flash-sale {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 27px;
+}
 
-  margin-bottom: 30px;
-}
-.sale .flash-sale li {
-  margin-bottom: -7px;
-}
-.sale .flash-sale li a {
-  font-size: 2rem;
-  color: #000;
-  font-weight: 500;
-}
-.sale .flash-sale li a span {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-.sale .flash-sale ul.right li a {
-  color: #c6281d;
-  font-size: 1.2rem;
-}
-.sale .flash-sale ul.right {
-  padding: 43px 0 0 0;
-}
 hr {
   margin-bottom: 60px;
 }
@@ -277,33 +296,42 @@ hr {
 .sale .product .content p {
   font-size: 1.3rem;
   font-weight: 400;
-  font-weight: 700;
+  font-weight: 600;
 }
 /* limited offers */
 .sale .flash-offers {
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
-.sale .flash-offers li {
-  margin-bottom: -7px;
+.sale1 .right {
+  position: relative;
+  top: 40px;
 }
-.sale .flash-offers li a {
-  font-size: 2rem;
-  color: #000;
-  font-weight: 500;
+ .sale2 .right {
+  position: relative;
+  top: 17px;
 }
-.sale .flash-offers li a span {
-  font-size: 1.4rem;
+.sale3 .left {
+  display: flex;
+  justify-content: space-between;
+}
+.sale3 .left p {
+  font-size: 1.3rem;
+  position: relative;
+  top: 6px;
+  left: 20px;
   font-weight: 400;
 }
-.sale .flash-offers ul.right li a {
-  color: #c6281d;
-  font-size: 1.2rem;
+.sale3 .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sale .flash-offers ul.right {
-  padding: 15px 0 0 0;
+.sale3 .right .insta a {
+  color: #000;
+  padding: 0 90px 0 10px;
+  font-weight: 400;
 }
 /* pramotion */
 .pramotion {
@@ -313,10 +341,11 @@ hr {
   margin-bottom: 10rem;
 }
 
+
 .flash-adv {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   flex-wrap: wrap;
 }
 .flash-adv ul.left {
@@ -327,11 +356,11 @@ hr {
   display: flex;
   flex-wrap: wrap;
 }
-.flash-adv li {
+.flash-adv  li {
   margin-bottom: -7px;
   padding: 0px 20px;
 }
-.flash-adv li a {
+.flash-adv  li a {
   font-size: 2rem;
   color: #000;
   font-weight: 500;
@@ -340,15 +369,15 @@ hr {
   margin-bottom: -7px;
   padding: 4px 15px 4px 8px;
 }
-.flash-adv li a span {
+.flash-adv  li a span {
   font-size: 1.4rem;
   font-weight: 400;
 }
-.flash-adv ul.right li a {
+.flash-adv  ul.right li a {
   color: #c6281d;
   font-size: 1.2rem;
 }
-.flash-adv ul.right {
+.flash-adv  ul.right {
   padding: 15px 0 0 0;
 }
 /* Instagram */
@@ -357,10 +386,10 @@ hr {
   flex-wrap: wrap;
   margin-bottom: 6rem;
 }
-.adv-img .card {
+.adv-img .card{
   position: relative;
 }
-.adv-img .card .img-icon {
+.adv-img .card .img-icon{
   position: absolute;
   top: 20px;
   right: 20px;
@@ -370,12 +399,13 @@ hr {
 .subscribe {
   background: #000;
   padding: 45px 0;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
   color: #fff;
 }
 .sub-letter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .sub-letter .content-left {
   display: flex;
@@ -387,21 +417,23 @@ hr {
 .sub-letter .content-left span {
   font-size: 2.6rem;
   font-weight: 400;
-  color: #f94438;
+  color: red;
 }
 .sub-letter .content-left {
   display: flex;
-  padding-left: 100px;
+  padding-left: 50px;
+  align-items: center;
 }
 .sub-letter .content-left img {
   height: 36px;
   width: 40px;
   margin-left: 21px;
-  margin-top: 8px;
 }
 .sub-letter .content-right span {
   font-size: 2rem;
-  font-weight: 300;
+    font-weight: 300;
+    position: relative;
+    top: 4px;
 }
 .sub-letter .content-right input {
   padding: 17px 53px;
@@ -409,27 +441,1148 @@ hr {
   border: none;
   font-size: 20px;
 }
+.sub-letter button.btn {
+  position: absolute;
+  border: 1px;
+  border-radius: 0 35px 35px 0;
+  background: #ff4236;
+  cursor: pointer;
+  padding: 11px 25px;
+}
+.sub-letter button.btn i.fa.fa-arrow-right {
+  font-size: 29px;
+  padding: 14px 20px;
+  color: #fff;
+}
 input:focus {
   outline: 0 !important;
-  outline-offset: none !important;
-  box-shadow: none !important;
+  outline-offset:none !important;
+  box-shadow: none  !important;
 }
-input:active {
-  border-style: none !important;
+input:active{
+  border-style: none  !important;
 }
-.sub-letter .content-right a {
-  background: red;
-  padding: 20px 33px 19px 33px;
-  border-radius: 0px 30px 30px 0;
-  margin-left: -4px;
+
+/* footer */
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.sub-letter .content-right a img {
-  max-width: 100%;
+footer {
+  margin-bottom: 46px;
+}
+img.logo-bottom {
+  margin-bottom: 40px;
+}
+.social-icon h3 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+ul.social {
+  display: flex;
+}
+ul.social img{
+  padding: 0 10px;
+}
+ul.social img {
+  padding: 0 4px;
+}
+ .company, .cservice, .ilink, .chats{
+  position: relative;
+}
+.social-icon, .company, .cservice, .ilink, .chats{
+  width: 200px;
+}
+footer li {
+  padding: 7px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer a {
+  color: #000;
+}
+footer h2{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.social-icon a:hover{
+margin-left: 0;
+}
+footer a:hover {
+  padding: 7px 0;
+  font-size: 1rem;
+  margin-left: 24px;
+}
+.company a:hover::before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  width: 15px;
+  margin-left: -19px;
+  margin-top: 9px;
+  border: 1px solid #000;
+}
+footer .cservice a:hover::before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  width: 15px;
+  margin-left: -19px;
+  margin-top: 9px;
+  border: 1px solid #000;
+}
+footer .ilink a:hover::before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  width: 15px;
+  margin-left: -19px;
+  margin-top: 9px;
+  border: 1px solid #000;
+}
+.chat {
+  position: relative;
+}
+.cimage {
+  position: fixed;
+    bottom: 50px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+footer p{
+  font-size: 1.1rem;
+  width: 140px;
+  margin-left: -132px;
+  border-radius: 30px 30px 0px 30px;
+  padding: 8px 17px;
+  color: #fff;
+  background: #EC180A;
+  font-weight: 300;
+  cursor: pointer;
+}
+/* copyright */
+.copyright {
+  height: 40px;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+
+@media screen and (max-width: 1600px){
+  .banner-content {
+    margin: 60px 0px 0px 50px;
+}
+.sticky + .banner1 {
+  margin-top: 205px !important;
+}
+.sale {
+  padding-top: 60px;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.pramotion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.cimage {
+  position: fixed;
+  bottom: 40px;
+  margin-left: 70px;
+  cursor: pointer;
+}
+}
+
+@media screen and (max-width: 1440px) { 
+  .sub-letter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  .subscribe .content-right {
+  position: relative;
+  right: 78px;
+}
+.sub-letter .content-left {
+  padding-left: 0px;
+}
+.cimage {
+  margin-left: 0px;
+}
+}
+@media screen and (max-width: 1340px) { 
+
+  .banner-content h1 {
+    font-size: 4rem;
+  }
+  .banner-content h2 {
+    font-size: 4rem;
+  }
+  .banner-content h2::before {
+    font-size: 10.5rem;
+    top: -35px;
+    left: -38px;
+  }
+  .banner-content p {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 40px;
+    margin-right: 144px;
+    margin-bottom: 24px;
+}
+.cimage {
+  margin-left: -45px;
+}
+}
+
+@media screen and (max-width: 1280px) { 
+  .top-header {
+    padding: 20px 20px;
+}
+
+.sale .flash-sale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.spaciality {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+.sale {
+  padding-top: 30px;
+}
+.product {
+  justify-content: space-around;
+  padding: 0 12px;
+  margin-bottom: 3rem;
+}
+.sale .flash-offers {
+  padding: 0 20px;
+}
+.pramotion {
+  margin-bottom: 3rem;
+  padding: 0 20px;
+}
+.flash-adv {
+  padding: 0 20px;
+}
+.pramotion img {
+  max-width: 607px;
+}
+.adv-img {
+  margin-bottom: 3rem;
+}
+.adv-img .card {
+  width: 19%;
+  padding: 0 0px 0 22px;
+}
+.subscribe {
+  background: #000;
+  padding: 35px 0;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.sub-letter .content-left {
+  display: flex;
+  padding-left: 15px;
+}
+.sub-letter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 20px 0 0;
+}
+.sub-letter .content-right input {
+  padding: 17px 30px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  font-size: 20px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+.cimage {
+  position: fixed;
+  bottom: 40px;
+  margin-left: -3rem;
+  cursor: pointer;
+}
+}
+@media screen and (max-width: 1024px) { 
+  .top-header {
+    padding: 20px 20px;
+}
+.banner img {
+  margin-top: 40px;
+  position: relative;
+  margin-left: 16px;
+}
+content h2 {
+  font-size: 3rem;
+}
+.banner-content h2::before {
+  font-size: 9.5rem;
+  top: -35px;
+  left: -25px;
+}
+
+
+/* Spaciality */
+.spaciality {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  /* flex-wrap: wrap; */
+}
+.Shiping, .offers, .offercode, .delivery, h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.spaciality p {
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Shiping, .offers, .offercode, .delivery{
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+img.truck, img.tag, img.rupees {
+  width: 40px;
+  height: 35px;
+  margin-right: 10px;
+}
+/* sale */
+
+.sale .flash-sale {
+  padding: 0 20px 0 20px;
+}
+
+.flash-adv ul.right {
+  padding: 0px 0 0 0;
+}
+
+.sale {
+  padding-top: 30px;
+}
+.sale .flash-offers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  padding: 0px 11px;
+}
+hr {
+  margin-bottom: 35px;
+}
+/* product */
+.product {
+  justify-content:space-between;
+  padding: 0 0px 3px 20px;
+  margin-bottom: 1rem;
+}
+.product .card {
+  width: 33%;
+  margin-bottom: 20px;
+}
+.product .img-top img {
+  width: 94%;
+}
+.product .hovercart img {
+  margin: 0px 8px;
+  height: 23px;
+  width: 8%;
+}
+.product .hovercart {
+  width: 94%;
+}
+  .adv-img {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0px 0px 0 20px;
+}
+.adv-img .card {
+  position: relative;
+  width: 25%;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.adv-img .card img {
+  width: 92%;
+}
+.adv-img .card .img-icon {
+  right: 30px;
+}
+/* pramotion */
+.pramotion {
+  margin-bottom: 2rem;
+  padding: 0 20px;
+  
+}
+.pramotion img {
+  max-width: 480px;
   height: auto;
   vertical-align: middle;
 }
+img{
+  vertical-align: middle;
+}
+/* subscribe */
+.subscribe {
+  background: #000;
+  padding: 31px 0;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.sub-letter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+}
+.sub-letter .content-left {
+  display: flex;
+  padding-left: 0px;
+}
+.sub-letter .content-right input {
+  padding: 10px 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  font-size: 18px;
+}
+.sub-letter button.btn {
+  padding: 5px 15px;
+}
+.subscribe .content-right {
+    position: relative;
+    right: 60px;
+}
+.sub-letter .content-left h2 {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.sub-letter .content-left span {
+  font-size: 2.2rem;
+}
+.sub-letter .content-right span {
+  font-size: 1.5rem;
+}
+.sub-letter .content-left img {
+  height: 30px;
+  width: 35px;
+  margin-left: 15px;
+  margin-top: 6px;
+}
 /* footer */
 footer {
+  margin-bottom: 0;
+  height: 20vh;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+.cimage {
+  position: fixed;
+  bottom: 40px;
+margin-left: 0;
+    right: 2rem;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 768px) { 
+  .sticky + .banner1 {
+    margin-top: 122px !important;
+}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px 0 39px 0;
+}
+nav ul li a {
+  color: #fff;
+  padding: 16px;
+  font-size: 1.2rem;
+  display: block;
+}
+  /* nav ul {
+    display: none;
+} */
+nav a.icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.top-header .right {
+  right: 75px;
+  position: absolute;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+nav a.icon {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  right: 6px;
+  top: -72px;
+  cursor: pointer;
+}
+header .left {
+  display: none;
+}
+header .middle img {
+  width: 100px;
+}
+a.icon {
+  position: absolute;
+  top: -4px;
+  right: -55px;
+}
+.icon:focus {
+  outline: none  !important;
+  box-shadow: none;
+}
+.right::focus {
+  outline: none !important;
+}
+/* :active:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+} */
+.middle-header {
+  padding: 13px;
+  border: 1px solid #000;
+  background-color: #000;
+  position: fixed;
+  left: -100%;
+  height: 100%;
+  top: 0;
+  width: 300px;
+}
+.middle-header.active {
+  z-index: 9999;
+  left: 0;
+}
+.offer ul {
   display: flex;
   justify-content: space-between;
 }
+.offer ul li a {
+  padding-right: 5px;
+  color: #000;
+}
+nav ul {
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  align-items: center;
+  background: gainsboro;
+}
+/* banner */
+.sticky + .banner {
+  margin-top: 120px !important;
+}
+.banner-content {
+  margin: 60px 0px 0px 0px;
+}
+
+.banner-content h1 {
+  font-size: 2rem;
+}
+.banner-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+.banner-content h2::before {
+    font-size: 4.5rem;
+    opacity: 0.06;
+    top: -16px;
+    left: -15px;
+}
+.banner-content p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 32px;
+  margin-right: 13px;
+  margin-bottom: 24px;
+}
+.sale {
+  padding-top: 30px;
+}
+.sale .flash-sale {
+  margin-bottom: 20px;
+}
+hr {
+  margin-bottom: 25px;
+}
+.product .hovercart {
+  width: 96%;
+}
+.hovercart img {
+  margin: 0px 8px;
+  height: 23px;
+  width: 10% !important;
+}
+.product {
+  margin-bottom: 1rem;
+}
+.sale .product .content {
+  margin-top: 10px;
+}
+
+/* spacaility */
+ .Shiping, .offers, .offercode, .delivery {
+  padding: 6px 20px 6px 10px;
+}
+.product {
+  justify-content: space-between;
+}
+.sale .product .content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.sale .flash-offers {
+  margin-bottom: 20px;
+  padding: 0px 17px;
+}
+.sale .product .content h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+/* sale */
+.sale .card {
+  margin: 0px 3px 15px -4px;
+  width: 50%;
+}
+.sale .card .img-top img{
+  width: 96%;
+}
+.adv-img .card {
+  margin: 0;
+}
+.adv-img {
+  justify-content: flex-start;
+}
+.adv-img .card img {
+  width: 96%;
+}
+/* instagram */
+
+.flash-adv ul.right {
+  padding: 0px 5px 0px 0px;
+}
+.sale .flash-sale {
+  padding: 0 20px 0 17px;
+}
+.flash-adv ul.right {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.adv-img .card {
+  position: relative;
+  width: 50%;
+  margin: 10px 0 0 0px;
+}
+.sub-letter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  padding: 0 28px 0 17px;
+}
+.flash-adv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+/* pramotion */
+.pramotion img {
+  max-width: 357px;
+  padding: 0px;
+
+}
+.pramotion {
+  margin-bottom: 3rem;
+  padding: 0 18px;
+}
+.adv-img {
+  margin-bottom: 2rem;
+  padding: 0px 0px 0px 17px;
+}
+/* subscribe */
+.content-left {
+  display: flex;
+  padding-left: 6px;
+}
+.sub-letter .content-left h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.sub-letter .content-left span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #F94438;
+}
+
+.sub-letter .content-left img {
+  height: 30px;
+  width: 40px;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.sub-letter .content-right span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.subscribe .content-right {
+  position: relative;
+  right: 45px;
+}
+/* footer */
+footer {
+  margin-bottom: 0;
+  height: 53vh;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+footer li {
+  padding: 4px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.social-icon, .company, .cservice, .ilink, .chats {
+  padding: 0 20px 15px 20px;
+}
+footer .ilink {
+  margin-left: 0px;
+}
+img.logo-bottom {
+  margin-bottom: 10px;
+}
+.special {
+  padding: 20px 5px 10px 6px;
+}
+.Shiping, .offers, .offercode, .delivery {
+  margin: 0px 0 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+}
+.spaciality .content {
+  text-align: center;
+}
+.subscribe {
+  padding: 30px 0;
+  margin-bottom: 2rem;
+}
+
+.cimage {
+  position: fixed;
+  bottom: 9rem;
+  right: 1rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.sticky + .banner1 {
+  margin-top: 122px;
+}
+/* media Queries */
+@media screen and (max-width: 567px) { 
+  .sticky + .banner1 {
+    margin-top: 160px;
+}
+.banner-content {
+  margin: 60px 0px 0px 35px;
+}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px 0 39px 0;
+}
+nav ul li a {
+  color: #fff;
+  padding: 16px;
+  font-size: 1.2rem;
+  display: block;
+}
+  nav ul {
+    display: none;
+}
+
+header .left {
+  display: none;
+}
+header .middle img {
+  width: 100px;
+}
+/* banner */
+.banner img {
+  margin-top: 40px;
+  position: relative;
+  display: none;
+}
+.banner1 {
+  background: #f2afb8;
+  position: relative;
+}
+.banner1 img {
+  margin-top: 40px;
+  display: none;
+}
+.banner-img {
+  height: 540px;
+}
+
+/* spacaility */
+ .Shiping, .offers, .offercode, .delivery {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 6px 30px;
+}
+/* sale */
+
+  .sale .card {
+    margin: 0px 6px 15px 17px;
+    width: 100%;
+
+}
+.product {
+  justify-content: space-between;
+  padding: 0 10px 3px 0px;
+  margin-bottom: 1rem;
+}
+.adv-img {
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+.adv-img .card img {
+  width: 100%;
+}
+.sale .card .img-top img {
+  width: 100%;
+}
+.adv-img .card {
+  margin: 0;
+}
+/* instagram */
+.flash-adv ul.right {
+  padding: 21px 0 0 18px;
+}
+.flash-adv ul.right {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flash-adv ul.right li a {
+  color: #c6281d;
+  font-size: 1rem;
+}
+.flash-adv .right li {
+  margin-bottom: -7px;
+  padding: 7px 15px 4px 8px;
+}
+.sub-letter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* pramotion */
+.pramotion img {
+  max-width: 360px;
+  padding: 0px 20px;
+}
+.pramotion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0;
+}
+.flash-adv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.spaciality {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+}
+.Shiping, .offers, .offercode, .delivery {
+  margin: 0px 0 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.sale3 .right .insta a {
+  color: #000;
+  padding: 0 22px 0 0px;
+  font-weight: 400;
+}
+.sale .right a {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+/* subscribe */
+.subscribe .content-right {
+  position: relative;
+  right: 0px;
+}
+.sub-letter .content-left {
+  display: flex;
+  padding-left: 0px;
+}
+.sub-letter .content-left h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.sub-letter .content-left span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #F94438;
+}
+.sub-letter .content-left img {
+  height: 30px;
+  width: 40px;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+.content-right {
+  padding: 0 0px;
+}
+.sub-letter .content-right input {
+  padding: 10px 0px 10px 15px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.sub-letter .content-right a {
+  background: red;
+  padding: 13px 15px 12px 15px;
+  border-radius: 0px 30px 30px 0;
+  margin-left: -4px;
+}
+.product .hovercart {
+  width: 100%;
+}
+/* footer */
+footer {
+  margin-bottom: 91px;
+  padding: 0;
+  height: 117vh;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+}
+footer .ilink {
+  margin-left: 0px;
+}
+img.logo-bottom {
+  margin-bottom: 10px;
+}
+.sub-letter .content-right span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  top: -5px;
+  /* bottom: -27px; */
+}
+.Shiping, .offers, .offercode, .delivery,.content {
+  margin: 0px 0 15px 0;
+}
+.cimage {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+.social-icon, .company, .cservice, .ilink, .chats {
+  margin: 25px 0 0px 0;
+  width: 300px;
+}
+footer li {
+  padding: 3px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+}
+@media screen and (max-width: 320px) {
+  .middle-header {
+    padding: 13px;
+    border: 1px solid #000;
+    background-color: #000;
+    position: fixed;
+    left: -100%;
+    height: 100%;
+    top: 0;
+    width: 250px;
+}
+  .banner-img {
+    height: 450px;
+}
+  .banner-content {
+    position: absolute;
+    top: 6%;
+    left: 9px;
+    right: 3px;
+}
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .banner-content h2 {
+    font-size: 2rem;
+  }
+  .banner-content h2::before {
+    top: 31px;
+    right: 1rem;
+}
+.pramotion img {
+    max-width: 316px;
+    padding: 0px 10px 0 16px;
+}
+.adv-img .card {
+  margin: 0;
+}
+.sale .left h2 {
+  font-size: 1.5rem;
+}
+.sale3 .right .insta a {
+  color: #000;
+  padding: 0 5px 0 0px;
+  font-weight: 400;
+}
+.sub-letter button.btn {
+  padding: 3px 15px;
+}
+.sale .right a {
+  color: red;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.adv-img {
+  padding: 0 17px 0 17px;
+}
+.offer ul li a {
+  padding-right: 16px;
+  color: #000;
+}
+.cimage {
+  top: 30rem;
+}
+.flash-adv ul.right li a {
+  font-size: 0.8rem;
+}
+.sub-letter .content-left h2 {
+  font-size: 1rem;
+}
+.sub-letter .content-left span {
+  font-size: 1.5rem;
+}
+.sub-letter .content-right input {
+  font-size: 14px;
+}
+.sub-letter .content-right a {
+  padding: 9px 10px 9px 10px;
+}
+.social-icon, .company, .cservice, .ilink, .chats {
+  margin: 25px 0 0px 0;
+}
+footer {
+    margin-bottom: 91px;
+    padding: 0;
+    height: 128vh;
+}
+footer li {
+  padding: 3px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+ }
+ 
