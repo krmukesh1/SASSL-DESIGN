@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce Website</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,6 +25,7 @@
             <img src="images/search.png" />
             <img src="images/heart.png" />
             <img src="images/Cart.png" />
+            <img src="images/user.png" />
             <a class="icon">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -41,11 +42,12 @@
             <li><a href="#">Men</a></li>
             <li><a href="#">Sale</a></li>
             <li><a href="#">Contact us</a></li>
+            <li><a href="#">Shop</a></li>
           </ul>
         </nav>
       </div>
       <div class="bottom-header">
-        <div class="offer">
+        <div class="offer ">
           <ul>
             <li>
               <a href="#"><span>50% </span>off Everything</a>
@@ -140,7 +142,7 @@
               </div>
               <div class="content">
                 <h4>Waterfall co-ord set</h4>
-                <p>&#8377; 1,499.00 <span>&#8377; 3,000.00</span></p>
+                <p>&#8377;1,499.00 <span>&#8377;3,000.00</span></p>
                 <p></p>
               </div>
             </div>
@@ -156,7 +158,7 @@
               </div>
               <div class="content">
                 <h4>Poncho top</h4>
-                <p>&#8377; 399.00 <span>&#8377; 3,000.00</span></p>
+                <p>&#8377;399.00 <span>&#8377;3,000.00</span></p>
                 <p></p>
               </div>
             </div>
@@ -172,7 +174,7 @@
               </div>
               <div class="content">
                 <h4>Off Shoulder gathered top</h4>
-                <p>&#8377; 699.00 <span>&#8377; 3,000.00</span></p>
+                <p>&#8377;699.00 <span>&#8377;3,000.00</span></p>
                 <p></p>
               </div>
             </div>
@@ -188,7 +190,7 @@
               </div>
               <div class="content">
                 <h4>Monochrome floral jumpsuit</h4>
-                <p>&#8377; 1,499.00 <span>&#8377; 3,000.00</span></p>
+                <p>&#8377;1,499.00 <span>&#8377;3,000.00</span></p>
                 <p></p>
               </div>
             </div>
@@ -221,7 +223,7 @@
             </div>
             <div class="right">
               <img src="images/Icon awesome-instagram.png" />
-              <span class="insta"><a href="#" > Follow on instagram</a></span>
+              <span class="insta"><a href="#" > Follow instagram</a></span>
               <span class="intsa1"><a href="#">View More +</a></span>
             </div>
           </div>
@@ -252,7 +254,7 @@
               </div>
             </div>
             <div class="card">
-              <img src="images/insta3.jpg" />
+              <img src="images/insta5.jpg" />
               <div class="img-icon">
                 <img src="images/Icon feather-copy-4.png" />
               </div>
@@ -266,13 +268,15 @@
       <div class="container">
         <div class="sub-letter">
           <div class="content-left">
-            <h2>Take UP TO <span>50% OFF</span></h2>
+            <h2>Take UP TO <span>50% OFF!</span></h2>
             <img src="images/Group 126.png" />
           </div>
           <div class="content-right">
             <span>Subscribe-</span>
+            <form action="/form.php">
             <input type="email" placeholder="Your email address" />
             <button class="btn"><img src="images/right-arrow.png"></button>
+          </form>
           </div>
         </div>
       </div>
@@ -310,7 +314,7 @@
         <div class="cservice">
           <h2>Customer Service</h2>
           <ul>
-            <li><a href="#">Mu Account</a></li>
+            <li><a href="#">My Account</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Track Order</a></li>
             <li><a href="#">Return Order</a></li>
@@ -345,21 +349,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/custom.js" rel="javascript"></script>
-    <script>
-      window.onscroll = function () {
-        myFUnction();
-      };
-
-      var navbar = document.getElementById("header");
-      var sticky = navbar.offsetTop;
-
-      function myFUnction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
   </body>
 </html>

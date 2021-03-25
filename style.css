@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: 'Buffalo';
+  src: url('Buffalo-Regular.woff2') format('woff2'),
+      url('Buffalo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   font-family: "Rubik", sans-serif;
 }
-p,h1,h2,h3,h4,h5,h6,span{
+h1{
+  font-family: 'buffalo';
+}
+p,h2,h3,h4,h5,h6,span{
   font-family: "Rubik", sans-serif;
 }
 li{
@@ -21,9 +33,6 @@ a{
   max-width: 1300px;
   margin: 0 auto;
 }
-header{
-  background: gainsboro;
-}
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -40,13 +49,19 @@ header{
   margin-left: 70px;
   cursor: pointer;
 }
+.top-header .right img:nth-child(4){
+  display: none;
+}
+.middle-header .nav li:nth-child(6){
+  display: none;
+}
 .top-header .right img {
   padding-left: 10px;
 }
 .middle-header {
   padding: 13px;
   border: 1px solid #000;
-  background-color: #000;
+  background-color: #20232a;
 }
 nav {
   display: flex;
@@ -88,9 +103,6 @@ nav a.icon {
   background: #f2afb8;
   position: relative;
 }
-.sticky + .banner {
-  margin-top: 205px !important;
-}
 .banner .container {
   display: flex;
   justify-content: space-between;
@@ -104,41 +116,62 @@ nav a.icon {
   position: relative;
 }
 .banner-content {
-  margin: 0 0px 0px 50px;
+  margin: 30px 0px 0px 40px;
+
 }
 .banner-content h1 {
-  font-size: 5rem;
-  font-weight: 300;
-  color: #8d3b47;
+  font-size: 4.8rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8d3b46;
 }
 .banner-content h2 {
   font-size: 6rem;
   font-weight: 500;
   color: #fff;
   position: relative;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 2.85px;
+  text-align: left;
+  color: #ffffff;
 }
 .banner-content h2::before {
   content: "FINEST";
   position: absolute;
   font-size: 16.5rem;
-  opacity: 0.06;
+  opacity: 0.08;
   top: -61px;
   left: -87px;
-  color: #000;
-  font-weight: 200;
-  letter-spacing: 5px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 8.04px;
+  text-align: left;
+  color: #702c35;
 }
 .banner-content p {
-  font-size: 2rem;
+  font-size: 1.85rem;
   color: #fff;
-  font-weight: 400;
-  line-height: 50px;
   margin-bottom: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #ffffff;
 }
 
 .banner-content button {
   padding: 15px 40px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: normal;
   border-color: #fff;
   cursor: pointer;
@@ -148,10 +181,10 @@ nav a.icon {
 }
 .banner-content button::after {
   content: "";
-  padding: 24px 96px;
+  padding: 24px 92px;
   border: 1px solid #fff;
   position: absolute;
-  left: 4px;
+  left: 6px;
 }
 
 button:active {
@@ -211,7 +244,7 @@ img.rupees {
   font-size: 2rem;
 }
 .sale .right a {
-  color: red;
+  color: #ec190b;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -221,7 +254,7 @@ img.rupees {
 }
 .sale .time1{
   font-size: 1.3rem;
-  color: red;
+  color: #ec190b;
   font-weight: 400;
 
 }
@@ -238,6 +271,7 @@ img.rupees {
 
 hr {
   margin-bottom: 60px;
+  opacity: 0.3;
 }
 /* product */
 .product {
@@ -397,14 +431,18 @@ hr {
 }
 /* subscribe */
 .subscribe {
-  background: #000;
-  padding: 45px 0;
+  background: #303030;
+  padding: 35px 0;
   margin-bottom: 6rem;
   color: #fff;
 }
+.subscribe .content-right {
+  display: inline-flex;
+  align-items: center;
+}
 .sub-letter {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .sub-letter .content-left {
@@ -426,20 +464,22 @@ hr {
 }
 .sub-letter .content-left img {
   height: 36px;
-  width: 40px;
-  margin-left: 21px;
+  width: 36px;
+  margin-left: 20px;
 }
 .sub-letter .content-right span {
   font-size: 2rem;
     font-weight: 300;
     position: relative;
-    top: 4px;
+    top: 0px;
+    margin-right: 15px;
 }
 .sub-letter .content-right input {
   padding: 17px 53px;
   border-radius: 30px 0 0 30px;
   border: none;
-  font-size: 20px;
+  font-size: 19px;
+  background: #f3f3f3;
 }
 .sub-letter button.btn {
   position: absolute;
@@ -448,6 +488,14 @@ hr {
   background: #ff4236;
   cursor: pointer;
   padding: 11px 25px;
+}
+.subscribe .content-right::before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  margin-right: 35px;
+  border: 1px solid #000;
+  background: #fff;
 }
 .sub-letter button.btn i.fa.fa-arrow-right {
   font-size: 29px;
@@ -570,14 +618,8 @@ footer p{
   background: #f0f0f0;
 }
 
-
+/* media Queries */
 @media screen and (max-width: 1600px){
-  .banner-content {
-    margin: 60px 0px 0px 50px;
-}
-.sticky + .banner1 {
-  margin-top: 205px !important;
-}
 .sale {
   padding-top: 60px;
 }
@@ -600,8 +642,7 @@ footer p{
   cursor: pointer;
 }
 }
-
-@media screen and (max-width: 1440px) { 
+@media screen and (max-width: 1440px){ 
   .sub-letter {
     display: flex;
     justify-content: space-between;
@@ -618,7 +659,7 @@ footer p{
   margin-left: 0px;
 }
 }
-@media screen and (max-width: 1340px) { 
+@media screen and (max-width: 1340px){ 
 
   .banner-content h1 {
     font-size: 4rem;
@@ -643,8 +684,7 @@ footer p{
   margin-left: -45px;
 }
 }
-
-@media screen and (max-width: 1280px) { 
+@media screen and (max-width: 1280px){ 
   .top-header {
     padding: 20px 20px;
 }
@@ -674,20 +714,20 @@ footer p{
 }
 .pramotion {
   margin-bottom: 3rem;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .flash-adv {
   padding: 0 20px;
 }
-.pramotion img {
-  max-width: 607px;
+  .pramotion img {
+    max-width: 580px;
 }
 .adv-img {
   margin-bottom: 3rem;
 }
 .adv-img .card {
   width: 19%;
-  padding: 0 0px 0 22px;
+  padding: 0 0px 0 15px;
 }
 .subscribe {
   background: #000;
@@ -724,7 +764,7 @@ footer .container {
   cursor: pointer;
 }
 }
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px){ 
   .top-header {
     padding: 20px 20px;
 }
@@ -732,6 +772,9 @@ footer .container {
   margin-top: 40px;
   position: relative;
   margin-left: 16px;
+}
+.banner-content {
+  margin: 30px 0px 0px 5px;
 }
 content h2 {
   font-size: 3rem;
@@ -817,6 +860,11 @@ hr {
   height: 23px;
   width: 8%;
 }
+.product .hovercart img:nth-child(2) {
+  margin: 0px 8px;
+  height: 23px;
+  width: 1px;
+}
 .product .hovercart {
   width: 94%;
 }
@@ -896,7 +944,10 @@ img{
   height: 30px;
   width: 35px;
   margin-left: 15px;
-  margin-top: 6px;
+  margin-top: -6px;
+}
+.product .hovercart {
+  bottom: 0px;
 }
 /* footer */
 footer {
@@ -917,10 +968,48 @@ margin-left: 0;
     cursor: pointer;
 }
 }
+@media screen and (max-width: 1020px){
+/* banner */
+.banner-content {
+  margin: 60px 0px 0px 0px;
+}
 
+.banner-content h1 {
+  font-size: 2rem;
+}
+.banner-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+.banner-content h2::before {
+    font-size: 4.5rem;
+    opacity: 0.06;
+    top: -16px;
+    left: -15px;
+}
+.banner-content p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 32px;
+  margin-right: 13px;
+  margin-bottom: 24px;
+}
+}
 @media screen and (max-width: 768px) { 
   .sticky + .banner1 {
     margin-top: 122px !important;
+}
+.top-header .right img:nth-child(4){
+  display: inline-block;
+}
+.middle-header .nav li:nth-child(6){
+  display: inline-block;
+}
+a.icon:focus {
+  outline: none !important;
 }
   nav {
     display: flex;
@@ -956,7 +1045,7 @@ nav a.icon {
 
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-8px, 8px);
 }
 
 .change .bar2 {opacity: 0;}
@@ -965,7 +1054,9 @@ nav a.icon {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-
+.bottom-header .offer li:nth-child(2){
+  display: none;
+}
 nav a.icon {
   display: block;
   color: #fff;
@@ -993,9 +1084,6 @@ a.icon {
 .right::focus {
   outline: none !important;
 }
-/* :active:focus {
-  outline: -webkit-focus-ring-color auto 1px;
-} */
 .middle-header {
   padding: 13px;
   border: 1px solid #000;
@@ -1009,6 +1097,7 @@ a.icon {
 .middle-header.active {
   z-index: 9999;
   left: 0;
+  transition: 0.8s;
 }
 .offer ul {
   display: flex;
@@ -1031,15 +1120,12 @@ nav ul {
   background: gainsboro;
 }
 /* banner */
-.sticky + .banner {
-  margin-top: 120px !important;
-}
 .banner-content {
   margin: 60px 0px 0px 0px;
 }
 
 .banner-content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .banner-content h2 {
   font-size: 2rem;
@@ -1069,14 +1155,6 @@ nav ul {
 }
 hr {
   margin-bottom: 25px;
-}
-.product .hovercart {
-  width: 96%;
-}
-.hovercart img {
-  margin: 0px 8px;
-  height: 23px;
-  width: 10% !important;
 }
 .product {
   margin-bottom: 1rem;
@@ -1110,8 +1188,16 @@ hr {
   margin: 0px 3px 15px -4px;
   width: 50%;
 }
-.sale .card .img-top img{
+.product .img-top img {
   width: 96%;
+}
+.product .hovercart {
+  width: 96%;
+}
+.product .hovercart img {
+  margin: 0px 8px;
+  height: 23px;
+  width: 8%;
 }
 .adv-img .card {
   margin: 0;
@@ -1130,6 +1216,11 @@ hr {
 .sale .flash-sale {
   padding: 0 20px 0 17px;
 }
+.sale3 .right .insta a {
+  color: #000;
+  padding: 0 15px 0 10px;
+  font-weight: 400;
+}
 .flash-adv ul.right {
   display: flex;
   flex-wrap: nowrap;
@@ -1137,7 +1228,7 @@ hr {
 .adv-img .card {
   position: relative;
   width: 50%;
-  margin: 10px 0 0 0px;
+  margin: 15px 0 0 0px;
 }
 .sub-letter {
   display: flex;
@@ -1175,18 +1266,34 @@ hr {
   font-weight: 300;
 }
 .sub-letter .content-left span {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 400;
   color: #F94438;
 }
-
-.sub-letter .content-left img {
-  height: 30px;
-  width: 40px;
-  margin-left: 10px;
-  margin-top: 6px;
+.sub-letter button.btn {
+  padding: 3px 15px;
 }
-
+.sub-letter .content-left img {
+  height: 28px;
+  width: 30px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+.sub-letter .content-right input {
+  padding: 10px 10px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  font-size: 16px;
+}
+.subscribe .content-right::before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  margin-right: 35px;
+  border: 1px solid #000;
+  background: #fff;
+  display: none;
+}
 .sub-letter .content-right span {
   font-size: 1.5rem;
   font-weight: 300;
@@ -1213,6 +1320,7 @@ footer li {
 }
 .social-icon, .company, .cservice, .ilink, .chats {
   padding: 0 20px 15px 20px;
+  width: 242px;
 }
 footer .ilink {
   margin-left: 0px;
@@ -1247,26 +1355,75 @@ img.logo-bottom {
   margin-left: 0;
   cursor: pointer;
 }
-}
-
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
 }
-
-.sticky + .banner1 {
-  margin-top: 122px;
 }
-/* media Queries */
+@media screen and (max-width: 650px) {
+  /* banner */
+  .banner-content {
+    margin: 0px 0px 0px 56px;
+}
+.banner img {
+  margin-top: 40px;
+  position: relative;
+  display: none;
+}
+.banner-content h1 {
+  font-size: 4rem;
+}
+.banner-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+.banner-content h2::before {
+    font-size: 4.5rem;
+    opacity: 0.06;
+    top: -16px;
+    left: -15px;
+}
+.banner-content p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 32px;
+  margin-right: 13px;
+  margin-bottom: 24px;
+}
+.sub-letter button.btn {
+  padding: 5px 15px;
+}
+}
 @media screen and (max-width: 567px) { 
   .sticky + .banner1 {
     margin-top: 160px;
 }
 .banner-content {
-  margin: 60px 0px 0px 35px;
+  margin: 0px 0px 90px 35px;
+}
+.banner-content button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+.banner-content button::after {
+  content: "";
+  padding: 18px 65px;
+}
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-4px, 4px);
 }
   nav {
     display: flex;
@@ -1283,7 +1440,15 @@ nav ul li a {
   nav ul {
     display: none;
 }
+.offer ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.offer ul li  {
+  padding: 5px 0 0 0;
 
+}
 header .left {
   display: none;
 }
@@ -1335,7 +1500,7 @@ header .middle img {
 .adv-img .card img {
   width: 100%;
 }
-.sale .card .img-top img {
+.product .img-top img{
   width: 100%;
 }
 .adv-img .card {
@@ -1384,7 +1549,6 @@ header .middle img {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  /* flex-wrap: wrap; */
   flex-wrap: wrap;
 }
 .Shiping, .offers, .offercode, .delivery {
@@ -1409,6 +1573,7 @@ header .middle img {
 .subscribe .content-right {
   position: relative;
   right: 0px;
+  display: block;
 }
 .sub-letter .content-left {
   display: flex;
@@ -1448,6 +1613,11 @@ header .middle img {
 .product .hovercart {
   width: 100%;
 }
+.product .hovercart img {
+  margin: 0px 8px;
+  height: 23px;
+  width: 8%;
+}
 /* footer */
 footer {
   margin-bottom: 91px;
@@ -1478,7 +1648,7 @@ img.logo-bottom {
 }
 .cimage {
   position: fixed;
-  bottom: 3rem;
+  bottom: 1rem;
   right: 1rem;
   margin-left: 0;
   cursor: pointer;
@@ -1504,14 +1674,44 @@ footer li {
     top: 0;
     width: 250px;
 }
+a.icon {
+  position: absolute;
+  top: -2px;
+  right: -65px;
+}
+.top-header .right img:nth-child(4) {
+  display: inline-block;
+  margin-right: -28px;
+}
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
   .banner-img {
     height: 450px;
 }
   .banner-content {
     position: absolute;
-    top: 6%;
+    top: 12%;
     left: 9px;
     right: 3px;
+}
+.banner-content {
+  margin: 0px 0px 90px 12px;
 }
   .banner-content h1 {
     font-size: 2rem;
@@ -1519,10 +1719,6 @@ footer li {
   .banner-content h2 {
     font-size: 2rem;
   }
-  .banner-content h2::before {
-    top: 31px;
-    right: 1rem;
-}
 .pramotion img {
     max-width: 316px;
     padding: 0px 10px 0 16px;
@@ -1550,8 +1746,9 @@ footer li {
   padding: 0 17px 0 17px;
 }
 .offer ul li a {
-  padding-right: 16px;
+  padding-right: 9px;
   color: #000;
+  font-size: 15px;
 }
 .cimage {
   top: 30rem;
